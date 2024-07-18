@@ -3,7 +3,7 @@
 ## TODO
 
 - [x] Make it deploy (vercel)
-- [] Scaffold basic ui with mock data
+- [x] Scaffold basic ui with mock data
 - [] Set up db (vercel postgres)
 - [] Attach db to UI
 - [] Add auth (w/ clerk)

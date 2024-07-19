@@ -1,7 +1,6 @@
 import "server-only";
 import { db } from "./db";
 import { auth } from "@clerk/nextjs/server";
-import { Equal } from "drizzle-orm";
 
 export async function getMyImages() {
   const user = auth();

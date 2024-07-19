@@ -1,4 +1,4 @@
-import { SignIn, SignedOut } from "@clerk/nextjs";
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 import { getMyImages } from "~/server/queries";
 
 export const dynamic = "force-dynamic";
@@ -19,11 +19,17 @@ async function Images() {
 
 export default function Page() {
   return (
-    <div className="flex flex-col gap-4">
-      <SignedOut>
-        <SignIn />
-      </SignedOut>
-      <Images />
-    </div>
+    <main className="">
+      <div className="flex flex-col gap-4">
+        <SignedOut>
+          <div className="h-full w-full text-center text-2xl">
+            Please Sign in above
+          </div>
+        </SignedOut>
+        <SignedIn>
+          <Images />
+        </SignedIn>
+      </div>
+    </main>
   );
 }
